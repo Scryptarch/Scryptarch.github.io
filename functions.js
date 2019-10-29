@@ -1,4 +1,17 @@
- var importedCSV;
+function init(){
+  document.getElementById('fileInput').addEventListener('change', handleFileSelect, false);
+}
+function handleFileSelect(event){
+  const reader = new FileReader()
+  reader.onload = handleFileLoad;
+  reader.readAsText(event.target.files[0])
+}
+
+function handleFileLoad(event){
+  console.log(event);
+  document.getElementById('csv').textContent = event.target.result;
+} 
+var importedCSV;
         var exotics;
         function importCSV() {
             let csv = document.getElementById('csv').value;
