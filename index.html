@@ -27,7 +27,7 @@
     <script src="functions.js">
     </script>
 </head>
-<body>
+<body onload="init()>
     INSTRUCTIONS:<p></p>
     Step 1: Open DIM<p></p>
     Step 2: Go to Settings<p></p>
@@ -41,7 +41,10 @@
     Step 10: Browse options for your optimum armour set ups<p></p>
     Step 11: Let me know if there's anything that could be improved on<p></p>
     <div class='' id='preImport'>
-        <textarea id="csv" name="csvImport"></textarea>
+              <input id="test" accept=".csv" type="file"></input>
+        <p></p>
+                                                        
+        <textarea id="csv" name="csvImport" readonly></textarea>
         <p></p>
         Class:
         <select id="class" name="class">
