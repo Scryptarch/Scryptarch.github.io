@@ -73,6 +73,7 @@ var importedCSV;
             let armEle = document.getElementById('armEle').value;
             let chestEle = document.getElementById('chestEle').value;
             let legEle = document.getElementById('legEle').value;
+            let masterworkClass = document.getElementById('masterworkClass').value;
             let sorter = document.getElementById('Pstat').value;
             let secondarySorter = document.getElementById('Sstat').value;
             let armourForClass = importedCSV
@@ -112,28 +113,32 @@ var importedCSV;
                             if (head.Exotic + arms.Exotic + chest.Exotic <= 1) 
                                 Legs.forEach(legs => {
                                     if (head.Exotic + arms.Exotic + chest.Exotic + legs.Exotic <= 1) {
+                                      let masterworkClassModifier = 0
+                                      if(masterworkClass === 'Yes'){
+                                        masterworkClassModifier = 2;
+                                      }
                                         let thisCombo = {
                                             head: armourPieceIdentifier(head),
                                             arms: armourPieceIdentifier(arms),
                                             chest: armourPieceIdentifier(chest),
                                             legs: armourPieceIdentifier(legs),
                                             Mobility: Math.floor(
-                                                (head.Mobility + arms.Mobility + chest.Mobility + legs.Mobility) / 10
+                                                (head.Mobility + arms.Mobility + chest.Mobility + legs.Mobility + masterworkClassModifier) / 10
                                             ),
                                             Recovery: Math.floor(
-                                                (head.Recovery + arms.Recovery + chest.Recovery + legs.Recovery) / 10
+                                                (head.Recovery + arms.Recovery + chest.Recovery + legs.Recovery + masterworkClassModifier) / 10
                                             ),
                                             Resilience: Math.floor(
-                                                (head.Resilience + arms.Resilience + chest.Resilience + legs.Resilience) / 10
+                                                (head.Resilience + arms.Resilience + chest.Resilience + legs.Resilience + masterworkClassModifier) / 10
                                             ),
                                             Intelligence: Math.floor(
-                                                (head.Intelligence + arms.Intelligence + chest.Intelligence + legs.Intelligence) / 10
+                                                (head.Intelligence + arms.Intelligence + chest.Intelligence + legs.Intelligence + masterworkClassModifier) / 10
                                             ),
                                             Discipline: Math.floor(
-                                                (head.Discipline + arms.Discipline + chest.Discipline + legs.Discipline) / 10
+                                                (head.Discipline + arms.Discipline + chest.Discipline + legs.Discipline + masterworkClassModifier) / 10
                                             ),
                                             Strength: Math.floor(
-                                                (head.Strength + arms.Strength + chest.Strength + legs.Strength) / 10
+                                                (head.Strength + arms.Strength + chest.Strength + legs.Strength + masterworkClassModifier) / 10
                                             )
                                         }
                                         thisCombo.Total = thisCombo.Mobility + thisCombo.Recovery + thisCombo.Resilience + thisCombo.Intelligence + thisCombo.Discipline + thisCombo.Strength;
