@@ -25,8 +25,8 @@ var importedCSV;
                     Mobility: 1 * armourPieceArray[19],
                     Recovery: 1 * armourPieceArray[20],
                     Resilience: 1 * armourPieceArray[21],
-                    Intelligence: 1 * armourPieceArray[22],
-                    Discipline: 1 * armourPieceArray[23],
+                    Intelligence: 1 * armourPieceArray[23],
+                    Discipline: 1 * armourPieceArray[22],
                     Strength: 1 * armourPieceArray[24],
                     Total: 1 * armourPieceArray[25]
                 }
