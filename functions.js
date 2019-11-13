@@ -23,14 +23,14 @@ var importedCSV;
                     Class: armourPieceArray[7],
                     Element: armourPieceArray[9],
                     Mobility: 1 * armourPieceArray[19],
-                    Recovery: 1 * armourPieceArray[20],
-                    Resilience: 1 * armourPieceArray[21],
+                    Recovery: 1 * armourPieceArray[21],
+                    Resilience: 1 * armourPieceArray[20],
                     Intelligence: 1 * armourPieceArray[23],
                     Discipline: 1 * armourPieceArray[22],
                     Strength: 1 * armourPieceArray[24],
                     Total: 1 * armourPieceArray[25]
                 }
-                switch (armourPieceArray[27]) {
+                switch (armourPieceArray[35]) {
                     case 'Mobility Mod*': returnArray.Mobility += -10
                         break;
                     case 'Recovery Mod*': returnArray.Recovery += -10
