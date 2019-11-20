@@ -264,3 +264,50 @@ var importedCSV;
                 document.getElementById('Result').appendChild(HeaderRow);
             })
         }
+/*
+var y = { 
+		grant_type: 'authorization_code', 
+		'code': new URL(location.href).searchParams.get('code'), 
+		'client_id': 25796
+	}
+function handleAccessToken(response) {
+  if (response && response.access_token) {
+    const data = response;
+    const inception = Date.now();
+    const accessToken = {
+      value: data.access_token,
+      expires: data.expires_in,
+      name: 'access',
+      inception : inception
+    };
+
+    const tokens = {
+      accessToken : accessToken,
+      bungieMembershipId: data.membership_id
+    };
+
+    if (data.refresh_token) {
+      tokens.refreshToken = {
+        value: data.refresh_token,
+        expires: data.refresh_expires_in,
+        name: 'refresh',
+        inception: inception
+      };
+    }
+
+    return tokens;
+  } else {
+    throw new Error('No data or access token in response: ' + JSON.stringify(response));
+  }
+}
+fetch('https://www.bungie.net/platform/app/oauth/token/', 
+{
+method: 'POST',
+    body: Object.keys(y).reduce((acc, val, index) => {acc += `${function(){if(index !== 0){return '&'}return''}()}${val}=${y[val]}`; return acc}, ''),
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+
+}).then((response) => (response.ok ? response.json() : Promise.reject(response)))
+      .then(handleAccessToken)
+*/
