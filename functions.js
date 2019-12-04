@@ -46,6 +46,27 @@ var importedCSV;
                     default:
                         break;
                 }
+		if(armourPieceArray[5] === 'Leg Armor')
+		{
+            		let traction = document.getElementById('traction').value;
+			switch('Traction'){
+				case armourPieceArray[35]:
+				case armourPieceArray[36]:
+				case armourPieceArray[37]:
+				case armourPieceArray[38]:
+				case armourPieceArray[39]:
+					if(traction === 'no'){
+						returnArray.Mobility += -5
+					}
+						
+					break;
+				default:
+					if(traction === 'yes'){
+						returnArray.Mobility += 5
+					}
+					break;
+			}
+		}
                 return returnArray
             }).filter(armourPiece => armourPiece.Element.includes('Capacity'))
             importedCSV = aCSV;
