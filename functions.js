@@ -49,7 +49,7 @@ var importedCSV;
 		if(armourPieceArray[5] === 'Leg Armor')
 		{
             		let traction = document.getElementById('traction').value;
-			switch('Traction'){
+			switch('Traction*'){
 				case armourPieceArray[35]:
 				case armourPieceArray[36]:
 				case armourPieceArray[37]:
