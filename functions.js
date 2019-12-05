@@ -10,7 +10,7 @@ function handleFileSelect(event){
 function handleFileLoad(event){
   console.log(event);
   document.getElementById('csv').textContent = event.target.result;
-	theCSV = event.target.result;
+	TheCSV = event.target.result;
 } 
 var TheCSV;
 var importedCSV;
