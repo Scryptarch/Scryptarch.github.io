@@ -10,11 +10,14 @@ function handleFileSelect(event){
 function handleFileLoad(event){
   console.log(event);
   document.getElementById('csv').textContent = event.target.result;
+	theCSV = event.target.result;
 } 
+var TheCSV;
 var importedCSV;
         var exotics;
         function importCSV() {
-            let csv = document.getElementById('csv').value;
+            //let csv = document.getElementById('csv').value;
+		let csv = TheCSV;
             let aCSV = csv.split('\n').map(armourPiece => armourPiece.split(',')).map(armourPieceArray => {
                 let returnArray = {
                     Name: armourPieceArray[0],
